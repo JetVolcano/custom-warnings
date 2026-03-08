@@ -1,7 +1,30 @@
 [project]
 name = "custom-warnings"
-version = "0.0.0"
-description = "Add your description here"
+version = "1.0.0"
+authors = [{ name = "JetVolcano" }]
+maintainers = [{ name = "JetVolcano" }]
+description = "Implements Custom Warnings"
 readme = "README.md"
 requires-python = ">=3.14"
+license = { file = "LICENSE.md" }
 dependencies = []
+
+[dependency-groups]
+dev = ["jupyter>=1.1.1", "ruff>=0.15.5", "ty>=0.0.21"]
+
+[tool.ruff]
+respect-gitignore = false
+
+[tool.ruff.lint]
+select = ["RUF", "PL", "I"]
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+order-by-type = true
+
+[tool.ty.rules]
+redundant-cast = "ignore"
+
+[project.urls]
+Source = "https://github.com/JetVolcano/custom-warnings"
+Issues = "https://github.com/JetVolcano/custom-warnings/issues"
